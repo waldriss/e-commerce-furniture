@@ -6,7 +6,7 @@ const routes=require('./routes')
 const connectDB=require('./connectdb');
 const cookieParser= require('cookie-parser');
 const { default: mongoose } = require('mongoose');
-const PORT=process.env.PORT ||8000;
+const PORT=process.env.PORT ||3000;
 
 const app= express();
 
