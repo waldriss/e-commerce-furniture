@@ -2,8 +2,8 @@ const express= require('express');
 require('dotenv').config();
 const cors = require('cors');
 const path= require('path');
-const routes=require('../routes')
-const connectDB=require('../connectdb');
+const routes=require('./routes')
+const connectDB=require('./connectdb');
 const cookieParser= require('cookie-parser');
 const { default: mongoose } = require('mongoose');
 const PORT=process.env.PORT ||8000;
