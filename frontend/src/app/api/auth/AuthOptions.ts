@@ -49,7 +49,7 @@ export const authOptions: NextAuthOptions = {
         },
       }),
     ],
-    secret: "your-secure-jwt-secret-value-here",
+    secret: process.env.NEXTAUTH_SECRET,
   
   
     callbacks: {async signIn({account,profile}){
