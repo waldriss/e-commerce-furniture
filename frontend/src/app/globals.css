@@ -15,6 +15,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity:0;
+    -webkit-appearance: none;
+}
 
 input[type=date]:required:invalid::-webkit-datetime-edit {
   color: transparent;

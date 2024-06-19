@@ -1,14 +1,16 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaCcVisa } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaCircleInfo } from "react-icons/fa6";
+import { BsCalendarDate } from "react-icons/bs";
 
 const CardPayment = () => {
     const { register, handleSubmit, watch,setValue, formState: { errors } } = useForm();
-
- 
+    const dateRef = useRef<HTMLInputElement | null>(null);
+    const { ref, ...rest } = register("expirydate",{required:"Expiry date Name required"})
+   
 
     const formatCard = (value:any) => {
         
@@ -60,8 +62,16 @@ const CardPayment = () => {
 
         <div className='flex gap-6 smcart:flex-col smcart:gap-0 smcart:items-center smcart:w-full'>
         <div className="input-data h-[50px] w-[80%] relative mb-[40px]">
-          <input {...register("expirydate",{required:"Expiry date Name required"})} className='bg-transparent outline-none  text-black h-full pr-12 w-full border-[2px] text-[17px] pl-[5px] border-solid border-[#1E1E24] appearance-none rounded-md focus:border-[3px] focus:border-solid focus:border-[#1E1E24] valid:border-[2px] valid:border-solid valid:border-[#1E1E24]' type="date" id="expirydate" name="expirydate" placeholder={""} required />
+          <input 
+          {...rest}
+          ref={(e) => {
+            ref(e)
+            dateRef.current = e // you can still assign to ref
+          }}
+          className='bg-transparent outline-none  text-black h-full pr-12 w-full border-[2px] text-[17px] pl-[5px] border-solid border-[#1E1E24] appearance-none rounded-md focus:border-[3px] focus:border-solid focus:border-[#1E1E24] valid:border-[2px] valid:border-solid valid:border-[#1E1E24]' type="date" id="expirydate" name="expirydate" placeholder={""} required />
           <div className="underline absolute h-[2px] w-full bottom-0 "></div>
+          <BsCalendarDate  onClick={()=>{ dateRef.current?.showPicker()}} className='cursor-pointer absolute bottom-[10px] right-3 text-[30px] text-[#33333d] '/>
+
           <label className='absolute bottom-[12px] text-lg left-[10px] font-serif text-[#1E1E24] pointer-events-none duration-[0.3s]'>Expiry Date</label>
         </div>
 
@@ -77,7 +87,7 @@ const CardPayment = () => {
         {errors?.cvvcode?.type=="required" && <span className=' inline-block relative -translate-y-8 mb-2  text-[#A37A74] font-serif'> {errors.cvvcode.message?.toString()} *</span>} 
         {(errors?.cvvcode?.type=="maxLength"||errors?.cvvcode?.type=="minLength") && <span className=' inline-block relative -translate-y-8 mb-2  text-[#A37A74] font-serif'> cvv must be 3 numbers *</span>} 
         
-        <button  type='submit'  className='mt-0  text-xl font-thin font-sans tracking-wider bg-[#A37A74] text-white no-underline px-5 py-3 smcart:px-4  rounded-[3px] border-[#A37A74] border-solid border-[1px] '> Go to payement section </button>
+        <button  type='submit'  className='mt-0  text-xl font-thin font-sans tracking-wider bg-[#A37A74] text-white no-underline px-5 py-3 smcart:px-4  rounded-[3px] border-[#A37A74] border-solid border-[1px] '> Submit </button>
 
        
     </form>        
