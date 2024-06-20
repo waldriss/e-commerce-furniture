@@ -10,6 +10,7 @@ import {
   useChangeNumberOfProductInCart,
   useRemoveProductFromCart,
 } from "../functions/api/mutations";
+import Image from "next/image";
 
 const CartProduct = ({
   setshowcart,
@@ -77,7 +78,8 @@ const CartProduct = ({
         href={`/products/${cartProduct._id}`}
         className="bg-[#4f4f5e] shadow-md rounded-xl relative flex justify-center items-center w-[160px] h-48 bg-cover"
       >
-        <img
+        <Image
+        fill
           className="relative z-[2] w-[98%] h-[78%] object-cover object-center shadowpng"
           src={imgsrc}
           alt=""
