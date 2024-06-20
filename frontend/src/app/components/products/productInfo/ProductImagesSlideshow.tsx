@@ -37,8 +37,9 @@ const ProductImagesSlideshow = ({
   const indicators = (index: any) => (
     <div
       className="indicator"
-      style={{ backgroundImage: `url(${imagesurls[index]})` }}
+     
     >
+      <Image height={100} width={200} quality={100} src={imagesurls[index]} alt="" className="h-full w-full object-cover"/>
       {" "}
     </div>
   );
@@ -67,8 +68,9 @@ const ProductImagesSlideshow = ({
                 <div
                 onClick={()=>setfullScreenSrc(image)}
                   className="cursor-pointer rounded-2xl relative flex items-center justify-center bg-contain bg-no-repeat bg-center h-[560px] md:h-[450px] smcart:h-[360px]"
-                  style={{ backgroundImage: `url(${image})` }}
+                  
                 >
+                  <Image fill  src={image} alt="" className="object-contain h-full w-full" />
                  
                 </div>
               </div>

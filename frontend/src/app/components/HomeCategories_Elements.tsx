@@ -45,9 +45,9 @@ const HomeCategories_Elements = () => {
           <div className='h-[500px] lg:h-[400px] w-[410px] md:w-[470px] smcart:h-[350px]'>
             <Image src={categ3_img} width={700} className=" rounded-xl shadowmax h-full w-full object-cover" alt="" /></div>
           <div className='flex flex-col justify-center items-start '>
-            <h2 className=" text-[3rem]  xl:text-[2.8rem] md:text-[2.7rem] smcart:text-[2.2rem] text-[#A37A74] font-sans  font-semibold">Chairs</h2>
-            <h3 className="text-start  text-white font-serif  font-extralight text-lg smcart:text-base  mb-5"> Stylish functionality for gatherings.</h3>
-            <Link href="/products?first_category=Tables%20and%20chairs" className='mt-0 bg-[#A37A74] text-white font-sans text-xl shadowbottom_btn tracking-wider no-underline px-5 py-3 smcart:px-4 font-thin rounded-[3px] border-[#A37A74] border-solid border-[1px] '> Explore </Link>
+            <h2 className=" text-[3rem]  xl:text-[2.8rem] md:text-[2.7rem] smcart:text-[2.2rem] text-[#A37A74] font-sans  font-semibold">Pillows</h2>
+            <h3 className="text-start  text-white font-serif  font-extralight text-lg smcart:text-base  mb-5"> Softness in every touch.</h3>
+            <Link href="/products?first_category=Textile" className='mt-0 bg-[#A37A74] text-white font-sans text-xl shadowbottom_btn tracking-wider no-underline px-5 py-3 smcart:px-4 font-thin rounded-[3px] border-[#A37A74] border-solid border-[1px] '> Explore </Link>
 
           </div>
 

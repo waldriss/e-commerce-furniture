@@ -17,7 +17,7 @@ const ProductColors = ({product_colors,showcolors,setshowcolors,setselectedcolor
 
     </div>
     </div>
-    {showcolors ? <IoIosArrowDown onClick={()=>setshowcolors(false)} className='text-[#4f4f5e] absolute top-4 text-xl right-3  cursor-pointer' /> : <IoIosArrowUp onClick={()=>setshowcolors(true)} className=' text-[#4f4f5e] top-4 absolute text-xl right-3  cursor-pointer' />}
+    {showcolors ? <IoIosArrowDown onClick={()=>setshowcolors(false)} className='text-[#A37A74] border-[1px] border-[#A37A74] rounded-lg p-1 absolute top-4 text-3xl right-3  cursor-pointer' /> : <IoIosArrowUp onClick={()=>setshowcolors(true)} className=' text-[#A37A74] border-[1px] border-[#A37A74] rounded-lg p-1 top-4 absolute text-3xl right-3  cursor-pointer' />}
     </>
 
   )

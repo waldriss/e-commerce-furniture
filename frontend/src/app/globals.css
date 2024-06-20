@@ -116,13 +116,19 @@ box-shadow: 0 0 1px rgb(0 0 0 / 60%);
   margin-bottom:10px;
   min-height: 80px;
   min-width: 120px;
+  max-height:80px;
+  max-width: 120px;
   border-radius: 12px;
+  overflow: hidden;
   
 }
+
 @media screen and (max-width: 540px) {
  .indicator{
   min-height: 70px;
   min-width: 105px;
+  max-height:70px;
+  max-width: 105px;
  }
 }
 

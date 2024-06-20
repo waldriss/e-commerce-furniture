@@ -25,7 +25,7 @@ const ProductsSideMenu = ({searchParams,setcolorsFilter,colorsFilter}:{searchPar
 
       }
     }*/
-  },[searchParams])
+  },[searchParams.first_category,searchParams.second_category])
   
   
     const {ShowSidemenu,SetShowSidemenu} = UseSideMenuStore();

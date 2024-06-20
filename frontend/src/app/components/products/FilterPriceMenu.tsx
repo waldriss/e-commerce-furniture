@@ -25,7 +25,6 @@ const FilterPriceMenu = ({
   };
   const handleValidation = () => {
     let url = searchParams;
-    const randomId = Math.random() * 100;
 
     delete url["max_price"];
     delete url["min_price"];

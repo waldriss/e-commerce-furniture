@@ -21,12 +21,13 @@ const CheckoutShippingDetails = () => {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [isOpen, setIsOpen] = useState(false);
- 
+ const [showmessage,setshowmessage]=useState(false)
   const [country, setCountry] = useState('AF');
   const Onsubmit=()=>{
   
     if(Object.keys(errors).length===0){
-       router.push('/checkout?step=payment&&payment=card')
+      setshowmessage(true);
+       //router.push('/checkout?step=payment&&payment=card')
 
     }
 
@@ -125,6 +126,7 @@ const CheckoutShippingDetails = () => {
     <div className='text-center'>
     <button  type='submit'  className='mt-0  text-xl font-thin font-sans tracking-wider bg-[#A37A74] text-white no-underline px-5 py-3 smcart:px-4  rounded-[3px] border-[#A37A74] border-solid border-[1px] '> Go to payement section </button>
     </div>
+    {showmessage&&<h2 className='font-serif text-center mt-4 text-[#A37A74]'>Payment feature not implemented yet</h2>}
     
 
 

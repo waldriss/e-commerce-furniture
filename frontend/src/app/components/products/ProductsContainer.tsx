@@ -5,20 +5,33 @@ import { TFilterattributes } from "../../typing/global";
 import { ProductInterface } from "../../typing/interfaces";
 import Product from "./Product";
 import { useGetProducts } from "../../functions/api/queries";
+import { useSearchParams } from "next/navigation";
+function paramsToObject(searchParams:any) {
+  let obj:any = {};
+  for (const [key, value] of searchParams.entries()) {
+      obj[key] = value;
+  }
+  return obj as TFilterattributes;
+}
 
 const ProductsContainer = ({
-  searchParams,
+  
   initialProducts,
 }: {
-  searchParams: TFilterattributes;
+
   initialProducts: ProductInterface[];
 }) => {
+ 
   const [colorsFilter,setcolorsFilter]=useState("");
+  const params =useSearchParams();
+  const searchParams=paramsToObject(params);
+
  
   const { data: products} = useGetProducts(searchParams, initialProducts,colorsFilter) as {
     data: ProductInterface[];
   };
 
+  
  
 
   return (

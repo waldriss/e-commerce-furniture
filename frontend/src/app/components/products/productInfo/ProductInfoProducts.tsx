@@ -9,7 +9,7 @@ const ProductInfoProducts =({
 }: {
   initialProducts: ProductInterface[];
 }) => {
-  const { data: products } = useGetProducts({limit:"8"}, initialProducts,"") as {
+  const { data: products } = useGetProducts({limit:"6"}, initialProducts,"") as {
     data: ProductInterface[];
   };
 

@@ -23,7 +23,7 @@ const Banner = ({imageAnimation,textAnimation}:{textAnimation:any,imageAnimation
           initial={{}}
           variants={imageAnimation}
           animate={startAnimation?"to":undefined}
-          className="relative h-96 w-96 "
+          className="relative smcart:h-32 smcart:w-16 md:h-60 md:w-44 h-96 w-96 "
         >
           
           <Image onLoad={()=>{setStartAnimation(true);}} src={mainimg.src} width={1400} height={700}  className={`${startAnimation?"visible":"invisible"} h-full w-full object-cover object-center`}  alt="" />

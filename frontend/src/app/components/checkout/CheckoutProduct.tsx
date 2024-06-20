@@ -16,7 +16,7 @@ const CheckoutProduct = ({cartProduct,quantity,ProductColor}:any) => {
             
           </Link>
           <div className='relative flex-1 flex flex-col justify-start items-start'>
-            <Link href={`/products/${cartProduct._id}`} className=' no-underline break-words font-serif text-[1rem] xl:text-[0.95rem] pb-[5px] text-white'> {truncate(cartProduct.productName,25) } </Link>
+            <Link href={`/products/${cartProduct._id}`} className=' no-underline break-words font-serif text-[1rem] xl:text-[0.95rem] pb-[5px] text-white'> {truncate(cartProduct.productName,23) }  <span className='text-[#A37A74]'> x{quantity}</span></Link>
 
             <div className=''>
                 <span className='relative text-[#A37A74] font-serif xl:text-[0.95rem] '> 137x123x13</span>

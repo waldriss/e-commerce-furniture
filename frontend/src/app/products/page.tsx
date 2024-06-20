@@ -10,7 +10,7 @@ import { getServerSideproducts } from "../functions/api/serverSideRequests";
 
 
 
-  
+
 
 const Products = async({searchParams}:{searchParams:TFilterattributes}) => {
   
@@ -20,7 +20,7 @@ const Products = async({searchParams}:{searchParams:TFilterattributes}) => {
   return <main className="pt-[200px] min-h-[1500px] lg:pt-[150px] bg-[#f2e8d9]" style={{ 'backgroundImage': `url(${bg_body.src})`}}>
     
     <SideMenuUtilites />
-     <ProductsContainer searchParams={searchParams} initialProducts={products}/>
+     <ProductsContainer  initialProducts={products}/>
 
       
 

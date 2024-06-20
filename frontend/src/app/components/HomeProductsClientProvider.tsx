@@ -5,9 +5,9 @@ import { ProductInterface } from "../typing/interfaces";
 import { useGetProducts } from "../functions/api/queries";
 
 const HomeProductsClientProvider = ({initialProducts}:{initialProducts:ProductInterface[]}) => {
-    const {data:products} =useGetProducts({limit:"8"},initialProducts,"") as {data:ProductInterface[]};
+    const {data:products} =useGetProducts({limit:"6"},initialProducts,"") as {data:ProductInterface[]};
   return (
-    <section className="flex overflow-x-scroll gap-x-10 mx-9 smcart:mx-4   py-8 lg:py-2 customScrollBar_dark ">
+    <section className="flex overflow-x-scroll gap-x-10 mx-9 smcart:mx-4 -mt-12 pt-20 pb-8 lg:pb-2 lg:-mt-[72px] customScrollBar_dark ">
       {Array.isArray(products) &&
         products
           ?.map((product, index) => (

@@ -7,7 +7,8 @@ export const getClientSideproducts = async (
   filterattributes?: TFilterattributes,
   
 ) => {
-  
+ 
+ 
   let searchparams = "";
 
   if (filterattributes) {
