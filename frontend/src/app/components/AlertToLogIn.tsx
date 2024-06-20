@@ -20,7 +20,7 @@ const AlertToLogIn = () => {
     <button type="button" onClick={()=>SetShowLogInAlert(false)} className="ms-auto -mx-1.5 -my-1.5 bg-[#585869] text-white rounded-lg focus:ring-2 focus:ring-[#464653] p-1.5 hover:bg-[#626274] inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#alert-border-1" aria-label="Close">
       <span className="sr-only">Dismiss</span>
       <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+        <path stroke="currentColor"  strokeLinecap="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
       </svg>
     </button>
 </div>

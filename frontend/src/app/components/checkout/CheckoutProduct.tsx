@@ -13,7 +13,7 @@ const CheckoutProduct = ({cartProduct,quantity,ProductColor}:any) => {
   return (
     <div className='[&:not(:last-child)]:pb-[15px]   flex gap-[15px] [&:not(:last-child)]:border-b-[1px] [&:not(:last-child)]:border-solid [&:not(:last-child)]:border-b-[#626274]'>
           <Link style={{ 'backgroundImage': `url(${svgbackground.src})`}} href={`/products/${cartProduct._id}`} className='bg-[#4f4f5e] shadow-md rounded-xl relative flex justify-center items-center w-[130px] h-[148px] bg-cover' >
-            <Image fill className='relative z-[2] w-[98%] h-[78%] object-cover object-center shadowpng' src={imgsrc}alt="" />
+            <Image  sizes="400" fill className='relative z-[2] w-[98%] h-[78%] object-cover object-center shadowpng' src={imgsrc}alt="" />
             
           </Link>
           <div className='relative flex-1 flex flex-col justify-start items-start'>

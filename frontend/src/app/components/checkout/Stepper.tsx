@@ -6,7 +6,7 @@ const Stepper = ({searchParams}:{searchParams:{step:string,payment:string}}) => 
     <li className={`flex w-full items-center text-[#33333d] after:border-[#595969] after:content-[''] after:w-full after:h-1 after:border-b  after:border-[7px] after:inline-block `}>
         <span className={`flex shadow_cart  items-center justify-center w-16 h-16 bg-[#595969]  rounded-full lg:h-12 lg:w-12  shrink-0`}>
             <svg className={`w-7 h-7 text-[#f2e8d9] g:w-4 lg:h-4 `} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5.917 5.724 10.5 15 1.5"/>
             </svg>
         </span>
     </li>

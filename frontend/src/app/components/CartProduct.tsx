@@ -79,6 +79,7 @@ const CartProduct = ({
         className="bg-[#4f4f5e] shadow-md rounded-xl relative flex justify-center items-center w-[160px] h-48 bg-cover"
       >
         <Image
+        sizes="400"
         fill
           className="relative z-[2] w-[98%] h-[78%] object-cover object-center shadowpng"
           src={imgsrc}
