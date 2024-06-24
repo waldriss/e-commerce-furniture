@@ -21,14 +21,14 @@ const handleRefreshToken = async (req, res) => {
       // Get the type of token and actual token
       const refresh = splitAuthorizationHeader[0];
       const refreshToken = splitAuthorizationHeader[1];
-      console.log(authorizationHeader);
+      
       // Check the type
       if (refresh !== "Refresh")
         return res
           .status(400)
           .json({ message: "The type is must be a Bearer" });
     
-          console.log("je suis la1");
+       
 
       if (!refreshToken) return res.status(404).json({message:"No token found"});
       

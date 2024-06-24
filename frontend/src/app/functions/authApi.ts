@@ -1,7 +1,7 @@
 import { backendUrl } from "./general_data";
 
 export const refreshToken=async(token: any)=>{
-  console.log(token);
+  
  
     const res = await fetch( backendUrl+"refreshToken", {
       method: "POST",

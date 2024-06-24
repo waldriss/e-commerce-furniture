@@ -331,6 +331,11 @@ const filterAndGetFavoriteProducts = async (sort, query, userId) => {
       },
     },
     {
+      $addFields: {
+        productId: { $toString: "$_id" }, // Convert _id to string for matching
+      },
+    },
+    {
       $lookup: {
         from: "ratings", // Name of the ratings collection
         let: { productId: "$productId" },
@@ -373,7 +378,6 @@ const filterAndGetFavoriteProducts = async (sort, query, userId) => {
     },
     {
       $addFields: {
-        productId: { $toString: "$_id" }, // Convert _id to string for matching
         favoritedBy: {
           $map: {
             input: "$favoritedBy",
