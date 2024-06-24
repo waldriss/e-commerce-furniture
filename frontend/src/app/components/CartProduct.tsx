@@ -97,9 +97,9 @@ const CartProduct = ({
         </Link>
 
         <div>
-          <span className="relative text-[#A37A74] font-serif ">
+          <span className="relative text-[#A37A74] font-serif smcart:text-sm ">
             {" "}
-            137x123x13
+            {cartProduct.first_category}
           </span>
           {ProductColor && (
             <div

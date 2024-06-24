@@ -6,8 +6,9 @@ import fauteuil from "@/public/fauteuil.png"
 import svgbackground from "@/public/bg-product.svg"
 import { truncate } from '@/src/app/functions/truncate'
 import Image from 'next/image'
+import { TCartProduct } from '../../typing/interfaces'
 
-const CheckoutProduct = ({cartProduct,quantity,ProductColor}:any) => {
+const CheckoutProduct = ({cartProduct,quantity,ProductColor}:{cartProduct:TCartProduct,quantity:number,ProductColor:string}) => {
   const product_image=cartProduct.image_without_bg;
   const imgsrc="https://raw.githubusercontent.com/waldriss/ecom_images/main"+product_image.split(".jpg")[0]+product_image.split(".jpg")[1]+".png";
   return (
@@ -20,7 +21,7 @@ const CheckoutProduct = ({cartProduct,quantity,ProductColor}:any) => {
             <Link href={`/products/${cartProduct._id}`} className=' no-underline break-words font-serif text-[1rem] xl:text-[0.95rem] pb-[5px] text-white'> {truncate(cartProduct.productName,23) }  <span className='text-[#A37A74]'> x{quantity}</span></Link>
 
             <div className=''>
-                <span className='relative text-[#A37A74] font-serif xl:text-[0.95rem] '> 137x123x13</span>
+                <span className='relative text-[#A37A74] font-serif xl:text-[0.95rem] '> {cartProduct.first_category}</span>
                 {ProductColor&&<div  style={{backgroundColor:ProductColor}}  className={` cursor-pointer absolute xl:relative xl:translate-y-0 translate-y-1 w-6 h-6 rounded-full border-solid `}></div>}
             </div>
             <div className=' w-full absolute bottom-1 flex justify-between items-center'>
