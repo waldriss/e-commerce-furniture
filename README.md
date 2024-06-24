@@ -17,9 +17,9 @@
 
 
 
-<p align="center">
+
 **E-commerce Furni World |** An online platform designed to provide a smooth and engaging shopping experience. Developed with Next.js and Express, this site features comprehensive product browsing, advanced filtering, and a responsive design. User authentication is secured with JWT.
-</p>
+
 
 <p align="center">
   <a href="" target="_blank">View Demo</a>
