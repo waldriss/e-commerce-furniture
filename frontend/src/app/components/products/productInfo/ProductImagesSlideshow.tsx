@@ -39,7 +39,7 @@ const ProductImagesSlideshow = ({
       className="indicator"
      
     >
-      <Image priority height={100} width={200} quality={50}  src={imagesurls[index]} alt="" className="h-full w-full object-cover"/>
+      <img   src={imagesurls[index]} alt="" className="h-full w-full object-cover"/>
       {" "}
     </div>
   );
@@ -47,7 +47,7 @@ const ProductImagesSlideshow = ({
   return (
     <>
       <div  onClick={()=>{setfullScreenSrc(""); setloading(true);}} className={`${fullScreenSrc===""?'opacity-0 pointer-events-none':'opacity-100 pointer-events-auto'} transition-opacity duration-200 bg-[rgba(14,14,17,0.9)] fixed w-screen flex items-center justify-center h-screen z-20 top-0 left-0`}>
-       {fullScreenSrc!==""&&<Image priority={false} onLoad={()=>setloading(false)} className={`${loading?'opacity-0':'opacity-100'} transition-opacity duration-200 max-w-screen max-h-screen absolute`} height={800} width={800} alt="" src={fullScreenSrc} />}
+       {fullScreenSrc!==""&&<img onLoad={()=>setloading(false)} className={`${loading?'opacity-0':'opacity-100'} transition-opacity duration-200 max-w-screen max-h-screen absolute`} height={800} width={800} alt="" src={fullScreenSrc} />}
         <button className={`absolute ${loading?'opacity-0':'opacity-100'} cursor-pointer opacity-0 transition-opacity  text-5xl text-white right-20 top-10 bg-[#4f4f5e] rounded-full px-2 `}>
           <IoIosClose  onClick={()=>{setfullScreenSrc(""); setloading(true);}} />
         </button>
@@ -70,7 +70,7 @@ const ProductImagesSlideshow = ({
                   className="cursor-pointer rounded-2xl relative flex items-center justify-center bg-contain bg-no-repeat bg-center h-[560px] md:h-[450px] smcart:h-[360px]"
                   
                 >
-                  <Image priority height={560} width={560} src={image} alt="" className="object-contain h-full w-full" />
+                  <img src={image} alt="" className="object-contain h-full w-full" />
                  
                 </div>
               </div>
